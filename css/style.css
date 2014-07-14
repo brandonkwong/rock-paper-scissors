@@ -1,0 +1,154 @@
+/* add transition classes */
+
+
+
+
+/* =Body
+-------------------------------------------------- */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+
+/* =Header
+-------------------------------------------------- */
+#header-bar {
+  margin-bottom: 1em;
+}
+
+
+/* =Container
+-------------------------------------------------- */
+.container {
+  margin: 0 auto;
+  max-width: 48em;
+  width: 90%;
+}
+
+.center {
+  text-align: center;
+}
+
+.hand {
+  display: inline-block;
+}
+
+
+/* =Battleground
+-------------------------------------------------- */
+#battleground .hand:first-child {
+  float: left;
+}
+
+#battleground .hand:last-child {
+  float: right;
+}
+
+#player, #enemy {
+  background-size: 23em;
+  height: 23em;
+  width: 23em;
+}
+
+#enemy {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+#rock, .rock {
+  background: url('../images/rock.png') no-repeat;
+}
+
+#paper, .paper {
+  background: url('../images/paper.png') no-repeat;
+}
+
+#scissors, .scissors {
+  background: url('../images/scissors.png') no-repeat;
+}
+
+.lose {
+  color: rgba(255, 0, 0, .85);
+  font-family: 'FontAwesome', sans-serif;
+  font-size: 23em;
+  height: 1em; /* original / new = 1em */
+  line-height: 1em;
+  opacity: 0;
+  width: 1em;
+}
+
+.show {
+  opacity: 1;
+}
+
+
+/* =Controller
+-------------------------------------------------- */
+#controller {
+  padding-bottom: .25em;
+}
+
+#controller h3 {
+  cursor: pointer;
+  margin: 0;
+}
+
+#controller .hand {
+  margin: 0 2em;
+}
+
+#rock, #paper, #scissors {
+  background-size: 6.25em;
+  cursor: pointer;
+  height: 6.25em;
+  position: relative;
+  width: 6.25em;
+}
+
+.touch, #rock:active, #paper:active, #scissors:active {       /* IN TEST */
+  top: .25em;
+}
+
+
+#new {                          /* WILL NOT NEED */
+  margin: 5em;
+}
+
+
+/* =Window
+-------------------------------------------------- */
+.md-window {  color: teal;
+  height: auto;
+  left: 50%;
+  max-width: 25em;
+  min-width: 20em;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  visibility: visible;  /* hidden */
+  width: 50%;
+  z-index: 2000;
+}

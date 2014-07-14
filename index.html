@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RPS</title>
+    <meta name="description" content="Rock Paper Scissors">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/rps.js"></script>
+  </head>
+  <body>
+
+    <div class="container center">
+
+      <!-- Header -->
+      <header id="header-bar">
+        <h1 id="header">Rock Paper Scissors</h1>
+      </header>
+
+      <!-- Window -->
+      <div class="md-window">
+        <div class="md-content">
+          <!-- Countdown -->
+          <h1 id="countdown"></h1>
+        </div>
+      </div>
+
+      <!-- Battleground -->
+      <section id="battleground">
+
+        <div class="hand">
+          <h2 id="player-name">Player Name</h2>
+          <div id="player">
+            <div class="lose">&#xf00d;</div>
+          </div>
+        </div>
+
+        <div class="hand">
+          <h2>Master Hand</h2>
+          <div id="enemy">
+            <div class="lose">&#xf00d;</div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="clearfix"></div>
+
+      <!-- Controller -->
+      <section id="controller">
+
+        <div class="hand" hand="rock">
+          <h3>[ 1 ]</h3>
+          <div id="rock"></div>
+        </div>
+
+        <div class="hand" hand="paper">
+          <h3>[ 2 ]</h3>
+          <div id="paper"></div>
+        </div>
+
+        <div class="hand" hand="scissors">
+          <h3>[ 3 ]</h3>
+          <div id="scissors"></div>
+        </div>
+
+      </section>
+
+      
+      <button id="new">New Game</button>
+    
+
+    </div>
+
+    
+
+  </body>
+</html>
