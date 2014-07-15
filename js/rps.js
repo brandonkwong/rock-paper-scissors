@@ -201,65 +201,82 @@ window.onload = function() {
   document.addEventListener('keydown', function(e) {  
     switch(e.keyCode) {
       case 49: // Rock [ 1 ]
-        rock.classList.add('touch');
-        while (gameActive == true && battleActive == false) {
-          playerBox.classList.add('animated', 'rotateInDownLeft');
-          if (time == 0) {
-            playerHand = 'rock';
-            player.classList.add('rock');
-            battleActive = true;
-            enemyRand();
-          }
-          else {
-            playerHand = 'rock';
-            player.classList.add('rock');
-            battleActive = true;
+        if (countActive == false) {
+          gameInit();
+        }
+        else {
+          rock.classList.add('touch');
+          while (gameActive == true && battleActive == false) {
+            playerBox.classList.add('animated', 'rotateInDownLeft');
+            if (time == 0) {
+              playerHand = 'rock';
+              player.classList.add('rock');
+              battleActive = true;
+              enemyRand();
+            }
+            else {
+              playerHand = 'rock';
+              player.classList.add('rock');
+              battleActive = true;
+            }
           }
         }
         break;
       case 50: // Paper [ 2 ]
-        paper.classList.add('touch');
-        while (gameActive == true && battleActive == false) {
-          playerBox.classList.add('animated', 'rotateInDownLeft');
-          if (time == 0) {
-            playerHand = 'paper';
-            player.classList.add('paper');
-            battleActive = true;
-            enemyRand();
-          }
-          else {
-            playerHand = 'paper';
-            player.classList.add('paper');
-            battleActive = true;
+        if (countActive == false) {
+          gameInit();
+        }
+        else {
+          paper.classList.add('touch');
+          while (gameActive == true && battleActive == false) {
+            playerBox.classList.add('animated', 'rotateInDownLeft');
+            if (time == 0) {
+              playerHand = 'paper';
+              player.classList.add('paper');
+              battleActive = true;
+              enemyRand();
+            }
+            else {
+              playerHand = 'paper';
+              player.classList.add('paper');
+              battleActive = true;
+            }
           }
         }
         break;
       case 51: // Scissors [ 3 ]
-        scissors.classList.add('touch');
-        while (gameActive == true && battleActive == false) {
-          playerBox.classList.add('animated', 'rotateInDownLeft');
-          if (time == 0) {
-            playerHand = 'scissors';
-            player.classList.add('scissors');
-            battleActive = true;
-            enemyRand();
-          }
-          else {
-            playerHand = 'scissors';
-            player.classList.add('scissors');
-            battleActive = true;
+        if (countActive == false) {
+          gameInit();
+        }
+        else {
+          scissors.classList.add('touch');
+          while (gameActive == true && battleActive == false) {
+            playerBox.classList.add('animated', 'rotateInDownLeft');
+            if (time == 0) {
+              playerHand = 'scissors';
+              player.classList.add('scissors');
+              battleActive = true;
+              enemyRand();
+            }
+            else {
+              playerHand = 'scissors';
+              player.classList.add('scissors');
+              battleActive = true;
+            }
           }
         }
         break;
-      case 13: // New Game [ Enter ]
-        gameInit();
-        break;
       case 27: // Main Menu [ Esc ]
-        // Go to Menu?
+        // Go to Menu
         // Resume?
         // Exit?
-        // show modal window
+        // Show modal window
         break;
+      case 13: // Input Value [ Enter ]
+        // Input value of name and attach to Player Name
+        break;
+      default: // New Game [ Any ]
+        gameInit();
     }
   });
   document.addEventListener('keyup', function(e) {  
