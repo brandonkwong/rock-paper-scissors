@@ -38,15 +38,19 @@
 
         <div class="hand">
           <h2 id="player-name">Player Name</h2>
-          <div id="player">
-            <div class="lose">&#xf00d;</div>
+          <div id="player-box">
+            <div id="player">
+              <div class="lose">&#xf00d;</div>
+            </div>
           </div>
         </div>
 
         <div class="hand">
           <h2>Master Hand</h2>
-          <div id="enemy">
-            <div class="lose">&#xf00d;</div>
+          <div id="enemy-box">
+            <div id="enemy">
+              <div class="lose">&#xf00d;</div>
+            </div>
           </div>
         </div>
 
@@ -59,28 +63,24 @@
 
         <div class="hand" hand="rock">
           <h3>[ 1 ]</h3>
-          <div id="rock"></div>
+          <div id="rock" hand="rock"></div>
         </div>
 
         <div class="hand" hand="paper">
           <h3>[ 2 ]</h3>
-          <div id="paper"></div>
+          <div id="paper" hand="paper"></div>
         </div>
 
         <div class="hand" hand="scissors">
           <h3>[ 3 ]</h3>
-          <div id="scissors"></div>
+          <div id="scissors" hand="scissors"></div>
         </div>
 
       </section>
 
-      
       <button id="new">New Game</button>
-    
 
     </div>
-
-    
 
   </body>
 </html>
