@@ -107,7 +107,7 @@ window.onload = function() {
     }
     else {
       lose.classList.add('show', 'animated', 'bounceInDown');
-      countdown.innerText = 'TOO SLOW';
+      countdown.innerText = ''; // Too Slow
       return 'lose'
     }
   }
@@ -123,7 +123,7 @@ window.onload = function() {
         if (battleActive == true) {
           clearInterval(counter);
           lose.classList.add('show', 'animated', 'bounceInDown');
-          countdown.innerText = 'TOO FAST';
+          countdown.innerText = ''; // Too Fast
           countActive = false;
         }
         else {
@@ -151,7 +151,6 @@ window.onload = function() {
     }, 1000);
   }
 
-
   // Tie Breaker
   function tieBreaker() {
     var tieTime = 0;
@@ -166,23 +165,22 @@ window.onload = function() {
   }
 
 
-  // Player Controllers
+  // Controller Click
   var handBtn = [].slice.call(document.querySelectorAll('#rock, #paper, #scissors'));
-
   handBtn.forEach(function(btn) {
     btn.addEventListener('mousedown', function() {
       btn.classList.add('touch');
       while (gameActive == true && battleActive == false) {
         playerBox.classList.add('animated', 'rotateInDownLeft');
         if (time == 0) {
-          var hand = btn.getAttribute('hand');
+          var hand = btn.getAttribute('data-hand');
           playerHand = hand;
           player.classList.add(hand);
           battleActive = true;
           enemyRand();
         }
         else {
-          var hand = btn.getAttribute('hand');
+          var hand = btn.getAttribute('data-hand');
           playerHand = hand;
           player.classList.add(hand);
           battleActive = true;
@@ -194,10 +192,10 @@ window.onload = function() {
     });
   });
 
+  // Controller Keys
   var rock = document.getElementById('rock');
   var paper = document.getElementById('paper');
   var scissors = document.getElementById('scissors');
-
   document.addEventListener('keydown', function(e) {  
     switch(e.keyCode) {
       case 49: // Rock [ 1 ]
@@ -267,16 +265,19 @@ window.onload = function() {
         }
         break;
       case 27: // Main Menu [ Esc ]
-        // Go to Menu
-        // Resume?
-        // Exit?
-        // Show modal window
+        // Future options:
+        //   menuActive = true; // => make into global var menuActive = true;
+        //   Bring up main menu
+        //   Enter Player Name
+        //   Explain Controls
         break;
       case 13: // Input Value [ Enter ]
-        // Input value of name and attach to Player Name
+        // Future options:
+        //   if menuActive == true
+        //     Input value of name and attach to Player Name
+        //   else
+        gameInit(); // => menuActive = false;
         break;
-      default: // New Game [ Any ]
-        gameInit();
     }
   });
   document.addEventListener('keyup', function(e) {  
@@ -295,7 +296,6 @@ window.onload = function() {
 
   // New Game
   var newGame = document.getElementById('new');
-
   newGame.addEventListener('click', function() {
     gameInit();
   });

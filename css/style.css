@@ -140,15 +140,41 @@ h2 {
   transform: translateX(-50%) translateY(-50%);
   visibility: visible;  /* hidden */
   width: 50%;
-  z-index: 2000;
+  z-index: 1000;
 }
+
+.md-countdown {
+  color: teal;  /* temp */
+  height: auto;
+  left: 50%;
+  max-width: 25em;
+  min-width: 20em;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  z-index: 1000;
+}
+
+.md-countdown h1 {
+  font-size: 8em;
+  margin: 0;
+}
+
+.count {
+  opacity: 0;
+}
+
 
 
 /* =Animate
 -------------------------------------------------- */
 .animated {
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
@@ -276,6 +302,8 @@ h2 {
 .rotateInDownLeft {
   -webkit-animation-name: rotateInDownLeft;
   animation-name: rotateInDownLeft;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
 }
 
 @-webkit-keyframes rotateInDownRight {
@@ -321,4 +349,6 @@ h2 {
 .rotateInDownRight {
   -webkit-animation-name: rotateInDownRight;
   animation-name: rotateInDownRight;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
 }
